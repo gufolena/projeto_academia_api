@@ -1,0 +1,198 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do contêiner principal */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f8fc; /* Fundo suave */
+  color: #444; /* Cor do texto mais suave */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo do título */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Estilo do campo de input */
+input {
+  padding: 12px;
+  width: 300px;
+  margin: 10px 05px 10px 0;  /* Adiciona mais espaço à direita (20px) */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+/* Estilo do campo de input no foco */
+input:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5); /* Destaque no foco */
+}
+
+/* Estilo do botão */
+button {
+  padding: 12px 30px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(30, 144, 255, 0.2); /* Sombras mais suaves */
+}
+
+/* Efeito de hover para o botão */
+button:hover {
+  background-color: #4682b4;
+  transform: scale(1.05); /* Botão cresce suavemente */
+  box-shadow: 0 8px 15px rgba(30, 144, 255, 0.3); /* Sombras mais intensas no hover */
+}
+
+/* Estilo da lista de exercícios */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 650px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Estilo dos itens da lista */
+li {
+  background-color: #ffffff;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+li strong {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+li span {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Efeito de hover nos itens da lista */
+li:hover {
+  background-color: #e6f7ff;
+  transform: translateY(-7px); /* Leve elevação */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Sombras mais intensas */
+}
+
+/* Animação para o título */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animação de entrada para os itens da lista */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de pressionamento do botão */
+button:active {
+  transform: scale(0.98); /* Dá a sensação de clique */
+}
+
+/* Estilo da logo (se necessário) */
+.App-logo {
+  height: 80px;
+  pointer-events: none;
+  margin-bottom: 25px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilizando os selects */
+select {
+  padding: 12px;
+  width: 320px;
+  margin: 10px 5px 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Efeito de foco no select */
+select:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+/* Opções dentro do select */
+option {
+  font-size: 1rem;
+  padding: 10px;
+  background-color: white;
+  color: #333;
+}
+
+/* Ajuste no container das opções */
+select:hover {
+  background-color: #f0f8ff;
+}
+
+/* Alinhamento do bloco de filtros */
+.filtro-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}

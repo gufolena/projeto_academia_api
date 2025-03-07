@@ -196,3 +196,9 @@ select:hover {
   gap: 15px;
   margin-bottom: 20px;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

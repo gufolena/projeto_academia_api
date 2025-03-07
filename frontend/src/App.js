@@ -41,9 +41,16 @@ const App = () => {
   const [tipo, setTipo] = useState("");
   const [dificuldade, setDificuldade] = useState("");
   const [exercicios, setExercicios] = useState([]);
+  const [erroMsg, setErroMsg] = useState(""); // Estado para armazenar a mensagem de erro
 
   const buscarExercicios = async () => {
-    if (!musculo) return alert("Escolha um músculo!");
+    if (!musculo) {
+      setErroMsg("Por favor, selecione um músculo antes de buscar os exercícios.");
+      setExercicios([]); // Limpa os exercícios anteriores quando há erro
+      return;
+    }
+
+    setErroMsg(""); // Limpa a mensagem de erro ao fazer uma busca válida
 
     const musculoIngles = traduzirParaIngles[musculo] || "";
     const tipoIngles = tiposExercicio[tipo] || "";
@@ -56,16 +63,16 @@ const App = () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data); // Verifique o formato dos dados recebidos da API
 
-      // Verifique a estrutura dos dados antes de usá-los
       if (Array.isArray(data)) {
         setExercicios(data);
       } else {
         console.error("Os dados não estão no formato esperado:", data);
+        setErroMsg("Ocorreu um erro ao buscar os exercícios. Tente novamente.");
       }
     } catch (error) {
       console.error("Erro ao buscar exercícios:", error);
+      setErroMsg("Erro ao buscar exercícios. Verifique sua conexão e tente novamente.");
     }
   };
 
@@ -96,6 +103,8 @@ const App = () => {
 
         <button onClick={buscarExercicios}>Buscar</button>
       </div>
+
+      {erroMsg && <p className="error">{erroMsg}</p>}
 
       {exercicios.length > 0 && (
         <ul className="exercise-list">

@@ -90,8 +90,8 @@ projeto_academia_api/
 
 🔗 Links das APIs
 
-API Ninjas - Exercícios
+API Ninjas - https://www.api-ninjas.com/api/exercises
 
-Google Cloud Translate API
+Google Cloud Translate API - https://cloud.google.com/translate/docs/reference/api-overview
 
 📌 Projeto desenvolvido para facilitar a busca e tradução de exercícios físicos! 💪🔥

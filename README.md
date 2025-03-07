@@ -1,68 +1,82 @@
-# projeto_academia_api
+Projeto Academia API
 
-## Descrição
+📌 Descrição
 
 Este projeto é uma API para buscar e traduzir informações sobre exercícios físicos de uma academia utilizando a API Ninjas e a API do Google Tradutor. A API permite buscar exercícios com base em filtros como músculo, tipo de exercício e dificuldade, retornando os dados traduzidos para o português. O frontend consome essa API e exibe as informações de forma interativa para o usuário.
 
-## Tecnologias Utilizadas
+🛠 Tecnologias Utilizadas
 
-- **Backend**: Node.js, Express
-- **Frontend**: React
-- **Bibliotecas**:
-  - **express**: Framework para criar o servidor.
-  - **axios**: Para realizar requisições HTTP à API da Ninjas.
-  - **cors**: Para permitir que o frontend acesse a API.
-  - **dotenv**: Para carregar variáveis de ambiente de maneira segura (como chaves de API).
+🔹 Backend
 
-## Pré-requisitos
+Node.js
 
-Antes de rodar o projeto, certifique-se de ter o **Node.js** instalado em sua máquina.
+Express
 
-- [Baixar o Node.js](https://nodejs.org/)
+Bibliotecas:
 
-## Instalação
+express - Framework para criar o servidor.
 
-### Backend
+axios - Para realizar requisições HTTP à API da Ninjas.
 
-1. Navegue até a pasta do backend (`projeto_academia_api`).
-2. Execute os seguintes comandos para inicializar o projeto e instalar as dependências:
+cors - Para permitir que o frontend acesse a API.
 
-```bash
+dotenv - Para carregar variáveis de ambiente de maneira segura (como chaves de API).
+
+🔹 Frontend
+
+React
+
+⚙️ Pré-requisitos
+
+Antes de rodar o projeto, certifique-se de ter o Node.js instalado em sua máquina.
+
+🔗 Baixar o Node.js
+
+📥 Instalação
+
+🔹 Backend
+
+1️⃣ Navegue até a pasta do backend (projeto_academia_api).
+2️⃣ Execute os seguintes comandos para inicializar o projeto e instalar as dependências:
+
 npm init -y
 npm install express axios cors dotenv
 
+🔹 Isso instala as dependências do projeto:
 
-Isso instala as dependências do projeto:
+express - Framework para criar o servidor.
 
-express: Framework para criar o servidor.
-axios: Para fazer requisições HTTP na API Ninjas.
-cors: Para permitir o acesso do frontend.
-dotenv: Para carregar variáveis de ambiente de maneira segura.
+axios - Para fazer requisições HTTP na API Ninjas.
 
+cors - Para permitir o acesso do frontend.
 
-### Backend
+dotenv - Para carregar variáveis de ambiente de maneira segura.
+
+🔑 Configuração do Backend
 
 Crie um arquivo .env na raiz do seu projeto backend (projeto_academia_api).
 Adicione a chave da API Ninjas e a chave da API do Google Tradutor no arquivo .env:
 
-Rodando o Projeto
-Primeiro, execute o backend:
-Na pasta projeto_academia_api, rode o comando:
+NINJAS_API_KEY=SUA_CHAVE_AQUI
+GOOGLE_TRANSLATE_API_KEY=SUA_CHAVE_AQUI
+
+🚀 Rodando o Projeto
+
+🔹 Executando o Backend
+
+Navegue até a pasta projeto_academia_api e rode o comando:
 
 node server.js
 
+✅ Isso iniciará o servidor backend, que estará disponível em: http://localhost:5000
 
-Isso iniciará o servidor backend, que estará disponível em http://localhost:5000.
-
-
-Depois, execute o frontend:
-
+🔹 Executando o Frontend
 
 cd frontend
 npm start
 
+📂 Estrutura do Projeto
 
-Estrutura do Projeto
 projeto_academia_api/
 │
 ├── server.js                # Arquivo principal do servidor backend
@@ -74,3 +88,10 @@ projeto_academia_api/
     ├── src/                 # Código-fonte do frontend (React)
     ├── package.json         # Gerenciador de dependências do frontend
 
+🔗 Links das APIs
+
+API Ninjas - Exercícios
+
+Google Cloud Translate API
+
+📌 Projeto desenvolvido para facilitar a busca e tradução de exercícios físicos! 💪🔥
